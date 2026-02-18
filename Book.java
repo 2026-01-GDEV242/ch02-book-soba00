@@ -52,5 +52,10 @@ class Book
         System.out.println(title);
     }
     
+    //PRINT DETIAILS METHOD (satisfies question 87)
+    public void printDetails()
+    {
+        System.out.println( "Title: " +title+ ", Author: " +author+ ", Page Count: " +pages);
+    }
     
 }

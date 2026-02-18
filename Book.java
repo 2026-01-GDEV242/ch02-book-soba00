@@ -24,7 +24,7 @@ class Book
         //pages = numPage;
     }
 
-    // GETTERS
+    // GETTERS (satisfies question 83)
     //getter for author
     public String getAuthor()
     {
@@ -42,15 +42,15 @@ class Book
     //}
     //PRINT
     //print for author
-    //public void printAuthor()
-    //{
-    //    System.out.println(author);
-    //}
+    public void printAuthor()
+    {
+        System.out.println(author);
+    }
     //print for title
-    //public void printTitle()
-    //{
-    //    System.out.println(title);
-    //}
+    public void printTitle()
+    {
+        System.out.println(title);
+    }
     
     
 }

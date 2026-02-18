@@ -11,8 +11,11 @@ class Book
     // The fields.
     private String author;
     private String title;
-    private int pages;
     private String refNumber;
+    private int pages;
+    private int borrowed;
+    
+    
 
     /**
      * Set the author and title fields when this object
@@ -24,6 +27,7 @@ class Book
         title = bookTitle;
         pages = bookPage;
         refNumber= "";
+        borrowed = 0;
     }
     
     
@@ -42,6 +46,11 @@ class Book
     public int getPages()
     {
        return pages;
+    }
+    //getter for borrowed (satisfies question 91)
+    public int getBorrowed()
+    {
+       return borrowed;
     }
     //getter for refNumber (satisfies question 88)
     public String getRefNumber()
@@ -63,7 +72,11 @@ class Book
             System.out.println("ERROR: reference number must be at least three number long");
         }
     }
-    
+    //mutator for borrowed (satisfies question 91)
+    public void borrow()
+    {
+        borrowed++;
+    }
     
     //PRINT (satisfies question 84)
     //print for author
@@ -87,7 +100,7 @@ class Book
         }
         
         
-        System.out.println( "Title: " +title+ ", Author: " +author+ ", Page Count: " +pages+ ", Reference #: " +store);
+        System.out.println( "Title: " +title+ ", Author: " +author+ ", Page Count: " +pages+ ", Reference #: " +store+ ", Times borrowed: " +borrowed);
     }
     
 }

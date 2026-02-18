@@ -14,6 +14,7 @@ class Book
     private String refNumber;
     private int pages;
     private int borrowed;
+    private final boolean courseText;
     
     
 
@@ -21,13 +22,14 @@ class Book
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPage)
+    public Book(String bookAuthor, String bookTitle, int bookPage, boolean p)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPage;
         refNumber= "";
         borrowed = 0;
+        courseText = p;
     }
     
     
@@ -57,10 +59,14 @@ class Book
     {
        return refNumber;
     }
-    
+    //getter of courseText (satisfies question 92)
+    public boolean isCourseText()
+    {
+       return courseText;
+    }
     
     //SETTERS (satisfies question 88)(satisfies question 90)
-    //setter/mutator for refNumber
+    //setter/mutator for refNumber only accepting refnums of 3 or more length
     public void setRefNumber(String ref)
     {
         if(ref.length()>2)
@@ -72,7 +78,7 @@ class Book
             System.out.println("ERROR: reference number must be at least three number long");
         }
     }
-    //mutator for borrowed (satisfies question 91)
+    //mutator for borrowed, goes up by one evry time you borrow (satisfies question 91)
     public void borrow()
     {
         borrowed++;
@@ -90,7 +96,7 @@ class Book
         System.out.println(title);
     }
     
-    //PRINT DETIAILS METHOD (satisfies question 87)(satisfies question 89)
+    //PRINT DETAILS METHOD returns ZZZ if no reference number is added (satisfies question 87)(satisfies question 89)
     public void printDetails()
     {   
         String store = "ZZZ";

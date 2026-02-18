@@ -50,11 +50,18 @@ class Book
     }
     
     
-    //SETTERS (satisfies question 88)
+    //SETTERS (satisfies question 88)(satisfies question 90)
     //setter/mutator for refNumber
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if(ref.length()>2)
+        {
+            refNumber = ref;
+        }
+        else
+        {
+            System.out.println("ERROR: reference number must be at least three number long");
+        }
     }
     
     

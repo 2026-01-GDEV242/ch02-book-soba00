@@ -70,10 +70,17 @@ class Book
         System.out.println(title);
     }
     
-    //PRINT DETIAILS METHOD (satisfies question 87)
+    //PRINT DETIAILS METHOD (satisfies question 87)(satisfies question 89)
     public void printDetails()
-    {
-        System.out.println( "Title: " +title+ ", Author: " +author+ ", Page Count: " +pages);
+    {   
+        String store = "ZZZ";
+        if(refNumber.length()>0)
+        {
+            store = refNumber;
+        }
+        
+        
+        System.out.println( "Title: " +title+ ", Author: " +author+ ", Page Count: " +pages+ ", Reference #: " +store);
     }
     
 }

@@ -3,8 +3,8 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author (Insert your name here.)
- * @version (Insert today's date here.)
+ * @author (Federico CAdavid Rojas)
+ * @version (2/18/2026)
  */
 class Book
 {
